@@ -69,7 +69,7 @@ public class Program
         // Setup Socket
 
         WebSocket socket = new WebSocket($"wss://{server}/ws");
-        socket.SslConfiguration.EnabledSslProtocols = System.Security.Authentication.SslProtocols.Tls13;
+        socket.SslConfiguration.EnabledSslProtocols = System.Security.Authentication.SslProtocols.Tls12;
         socket.OnMessage += StatusChanged;
         socket.Connect();
 
